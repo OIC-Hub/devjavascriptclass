@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javscript Form</title>
+</head>
+<b ody>
+    <h1 id="welcome"></h1>
+    <button onclick="greeting()">Click ME</button>
+    <form style="width:500px;margin: auto;">
+        <p>
+            Name: <br>
+            <input type="text"  id="name"  oninput=" getFormValues()">
+            <br>
+            <span id="getName"></span>
+        </p>
+        <p>
+            Phone Number: <br>
+            <input type="text"  id="phone" oninput=" getFormValues()">
+        </p>
+    </form>
+    
+    <script>
+// Form Handling
+       function getFormValues(){
+       let name=document.getElementById('name').value;
+       let data
+       if(name == ""){
+       data = 'Kindly enter your name'
+
+       }else{
+           data = name
+       }
+      document.getElementById('getName').innerHTML=data
+
+   let phone=document.getElementById('phone').value;
+    console.log('phone')
+
+    }
+
+
+
+
+
+    function greeting(){
+   document.getElementById('welcome').innerHTML="Welcome to third week of Javascript class"
+    }
+//  function sum(){
+//     let a =2;
+//     let b =12;
+//    let c = a+b
+//     // return c
+//  }
+//  console.log(sum())
+ document.getElementById('welcome').innerHTML=sum()
+ 
+//  function sum(a, b, c){  
+//   return  a+b+c
+   
+//  }
+function sum(a=0, b=12, c=10){ //using default parameters
+  return  a+b+c
+   
+ }
+ document.getElementById('welcome').innerHTML=sum()
+console.log(sum(200, 59900098990, 7))
+
+    </script>
+</body>
+</html>
