@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number</title>
+</head>
+<body>
+    <center>
+    <h2> try your Luck</h2>
+    <p id="faith"></p>
+    <input type="text" name="usernum" id="usernum" onchange="predict()" >
+</center>
+    <script>
+        function predict(){
+            let comRand = Math.floor(Math.random() * 10 );
+            let usernum = document.getElementById('usernum').value;
+            let faith =""
+            if(comRand == usernum){
+             faith = ` You Win your predicted number is ${usernum} and random number is ${comRand}`;
+            }else{
+                faith = `O lule your predicted number is ${usernum} and random number is ${comRand}`
+            }
+            document.getElementById('faith').innerHTML=faith;
+        }
+     
+    //  if(rand <= 0.50){
+    //     console.log(' You Win \n Your generated number is ' + rand )
+    //  }else{
+    //     console.log('O lule \n Your generated number is ' + rand)
+    //  }
+
+
+
+
+        // Checking Methods
+        // let name ="SOnday"
+    //     isFinite(67788)
+    //     isInteger(67.09)
+    //    console.log(isNaN(name)) 
+    //     let phone = 08102519925
+    //     console.log(typeof(phone))
+    //     phone = phone.toString()
+    //     console.log(typeof(phone))
+    //     console.log(phone)
+    //   console.log(phone.includes('081'))
+    //     let a = "56.00";
+    //     console.log(typeof(a))
+    //    let b= parseFloat(a)
+    //    POSITIVE_INIFINITE
+    //    NEGATIVE_INIFINITE
+    //   let b=  Number(a)
+    // console.log(b)
+    </script>
+</body>
+</html>
