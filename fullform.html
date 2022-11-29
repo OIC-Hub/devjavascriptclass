@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <p>
+        <a href="hdhdhdh.html" id="link"> My link</a>
+    </p>
+    <form id="form" style="width:30%;margin:auto">
+        <p>
+            <p id="submitName"></p>
+            Name: <br>
+            <input type="text" name="name" id="name">
+        </p>
+        <p>
+            Email: <br>
+            <input type="text" name="email" id="">
+        </p>
+        <input type="submit" value="Register">
+    </form>
+
+    <script>
+document.getElementById('link').addEventListener('click', link)
+function link(event){
+    event.preventDefault()
+    alert('This page is not ready yet')
+}
+
+// Submit Data
+let form=document.getElementById('form');
+form.addEventListener('submit', submitData)
+function submitData(event){
+    event.preventDefault();
+  let name= form['name'].value;
+  let email =form['email'].value;
+if( name.trim() == ""){
+    console.log('Name is required')
+}
+}
+
+</script>
+</body>
+</html>
