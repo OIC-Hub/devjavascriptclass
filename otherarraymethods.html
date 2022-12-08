@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Other Array Method </title>
+</head>
+<body>
+    
+    <script>
+        // sort()
+        const names =['Sunday', 'Ade', "Ojo", "Tayo"];
+        const ages =[33, 45, 67, 78, 89,89, 10, 2, 4, 20];
+        // names.sort()
+        // names.reverse()
+        // console.log(names)
+        ages.sort(function(a, b){
+           return a-b
+        });
+        console.log(ages)
+        // find()
+    // const findAge= ages.find(a =>{
+    //      return a > 70
+    //     })
+    //     console.log(findAge)
+
+    // find()
+    const findAge= ages.findIndex(a =>{
+         return a == 78
+        })
+        console.log(findAge)
+   // filter()
+//    const getAge = (a)=> a >40
+//    const ageOf40 = ages.filter(getAge)
+const ageOf40 = ages.filter((a) => a >40)
+console.log(ageOf40)
+
+// forEach() loop
+
+let text =""
+ageOf40.forEach((value, index, ary)=>{
+     text += value + "\n"
+})
+console.log(text)
+// map()
+const newageOf40 = ageOf40.map((value, index, arry)=>{
+            if(value > 50){
+                return "Pardon"
+            }else if(value > 45 && value <=50){
+                return "Escape"
+            }else{
+                return "Punished"
+            }
+})
+console.log(newageOf40)
+    </script>
+</body>
+</html>

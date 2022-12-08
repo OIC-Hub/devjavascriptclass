@@ -29,8 +29,7 @@
 // console.log( user["email"])
 // console.log(user.address )
    
-const names =['Sodiq', 'Blessing', 'Femi', 67, 80, false, true, 45, ['Ojo', 89, 60, [34, 56, 6 ]], 100];
- console.log(names[8][3][2])
+
 const users=[
         {name:'Sunday', age:12, address:'Osogbo'},
        {name:'Sodiq', age:120, address:'Osogbo'},
@@ -51,6 +50,32 @@ console.log(typeof(users))
 // console.log(Array.isArray(users))
 // console.log(users instanceof Array)
 
+// Array methods and properties 
+// length 
+const names =['Sodiq', 'Blessing', 'Femi', 67, 80, false, true, 45, ['Ojo', 89, 60, [34, 56, 6 ]], 100];
+console.log(names[8].length) // to get the array lenght that inside  array
+console.log(names.length) // to get the general array lenght
+// push()
+// names.push('Opeyemi', 'SUNDAY')
+// names.push(['Opeyemi', 'SUNDAY'])
+names.push({id:1, age: 45})
+names.pop()
+names.shift()
+// slice(start, end)
+// let newname = names.slice(3, 6);
+ // names.splice(start, numbers of deletion items, items to be added)
+ // names.splice(2, 0, 'Aminat', 'AHmad', 'Emmanuel') Use it to insert only
+// names.splice(2, 2, 'Aminat', 'AHmad', 'Emmanuel') Use it to delete and add
+names.splice(2, 2)  // Use it to delete only
+// toStrng()
+let arrayString=names.toString()
+console.log( arrayString)
+// console.log(newname);
+console.log(names)
+// split()
+let greeting = "How are you doing?";
+const newArray =greeting.split(" ");
+console.log(newArray)
 
 
 </script>

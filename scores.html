@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student punishment judgement</title>
+</head>
+<body>
+    
+    <script>
+ const scores =[52, 54, 100, 68, 71, 40,43];
+   const judgement =[]
+   let i =0
+ for(let score of scores){
+   if(score - 5 > 50){
+    judgement[i] = "Pardon"
+   }else if(score - 3 > 50){
+    judgement[i] = "Escape"
+   }else{
+    judgement[i]="Punish"
+   }
+
+   i++
+ }
+ console.log(judgement)
+
+    </script>
+</body>
+</html>

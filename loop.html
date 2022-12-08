@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+<body>
+    
+    <script>
+        let times="";
+        for(let i=1; i<=100; i++){
+
+        //    let number = i %2 == 0 ? i + " is even number \n" : i + " is odd number \n"
+        
+        let number;
+        if(i %2 == 0){
+            number =  i + " is even number \n" 
+           }else{
+            number =i + " is odd number \n"
+           }
+
+        times = times + number
+        }
+        console.log(times)
+      // array and for loop
+      const ages = [12, 34, 45, 67,89,10,34,56];
+      let text ="";
+      const newAges =[];
+      for(let i=0; i< ages.length; i++){
+        newAges[i] = ages[i]/2
+
+        text += ages[i] + "\n";
+      }
+     console.log(newAges)
+
+    //   for(let i =0; i< ages.length; i++){
+    //     if(ages[i] == 10){
+    //         // console.log('Unlucky Number');
+    //        break;
+    //     }
+    //     console.log(ages[i])
+    //   }
+
+    // let i =0
+    // for(; ; ){
+    //     if(i< ages.length){
+    //     if(ages[i] == 10){
+    //         // console.log('Unlucky Number');
+    //        break;
+    //     }
+    //     console.log(ages[i])
+    //   }else{
+    //     break;
+    //   }
+    //   i++
+    // }
+
+    // for in Loop
+    const user ={name:'Sunday', age:12, address:'Osogbo'}
+    for(let details in user){
+      if(user[details]== 'Sunday'){
+        console.log('Sunday is working at OIC Hub')
+        continue;
+      }
+      console.log(user[details])
+    }
+    const users=[
+        {name:'Sunday', age:12, address:'Osogbo'},
+       {name:'Sodiq', age:120, address:'Osogbo'},
+       {name:'Emmanuel', age:100, address:'Ibadan'},
+       {name:'Blessing', age:300, address:'Akure'},
+       {name:'Opeyemi', age:400, address:'Lagos'},
+       {name:'Femi', age:1000, address:'Ondo'},
+  ]
+  for(let index in users){
+    console.log(users[index].name)
+  }
+  for (let value of users){
+    console.log(value.age);
+    console.log(value.name);
+  }
+
+    </script>
+</body>
+</html>
