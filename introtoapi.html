@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to API</title>
+</head>
+<body>
+    
+    <script>
+        //GET, POST, Update, Delete
+        fetch('https://randomuser.me/api/').then(function(results){
+           return results.json()
+        }).then(data =>{
+            let genter =data.results[0].gender
+            let firstName = data.results[0].name.first;
+            let lastName = data.results[0].name.last;
+              console.log(firstName + " " + lastName)
+        })
+    </script>
+</body>
+</html>
