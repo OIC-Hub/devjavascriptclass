@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Date</title>
+</head>
+<body>
+    <div id="demo">
+
+    </div>
+
+    <script>
+// let newDate = new Date(1999, 45, 6, 7, 8, 45);
+//    let dateString= new Date('2005-11-23') 
+// console.log(dateString)
+
+  let newDate = new Date();
+  newDate.setFullYear(2007)
+  newDate.setHours(04)
+    console.log(newDate.toLocaleDateString())  // to gives this format (12/15/2022)
+ console.log(newDate.toLocaleTimeString()) // to gives local time in this format (9:45:06 AM)
+ let hours = newDate.getHours()
+ console.log(hours)
+ let year = newDate.getFullYear()
+ console.log(year)
+ let month = newDate.getMonth()
+ let months =['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'August', 'Sept', "Oct", 'Nov', 'Dec']
+ console.log(months[month])
+ let minutes = newDate.getMinutes();
+ console.log(minutes);
+ let day = newDate.getDay()
+ console.log(day)
+ let date = newDate.getDate()
+ console.log(date)
+ let seconds = newDate.getSeconds()
+
+ let todaysdate = `${year} ${months[month]} ${date }`
+ console.log(todaysdate)
+ let currentTime= `${hours}: ${minutes} : ${seconds}`
+ console.log(currentTime)
+//  setTimeout(welcome, 86400000)
+// function welcome(){
+//   document.getElementById('demo').innerHTML="<p> Welcome to OIC Hub </p>"
+// }
+
+setInterval(()=>{
+    let todate= new Date();
+    let hours = todate.getHours();
+    let minutes = todate.getMinutes(); 
+    let seconds= todate.getSeconds()
+    document.getElementById('demo').innerHTML=`${hours}: ${minutes} : ${seconds}`;
+
+
+}, 1000)
+
+</script>
+</body>
+</html>
