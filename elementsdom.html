@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Dom</title>
+</head>
+<body id="body">
+    <table border="1" >
+        <tr id="row1">
+            <th>Fruits</th>
+            <th>Food</th>
+        </tr >
+
+    </table>
+<section id="about">
+
+</section>
+    <script>
+  let table= document.getElementsByTagName('table')[0];
+    let tr2 = document.createElement('tr');
+    let td1 = document.createElement('td')
+   
+    let tr1 = document.querySelector('#row1')
+      td1.innerHTML="Mango"
+      tr2.appendChild(td1);
+      let td2 = document.createElement('td')
+      td2.innerHTML='Rice'
+      console.log(td2)
+      td1.after(td2)
+      tr1.after(tr2 )
+        // dument.body
+       let div1 = document.createElement('div')
+       let h11 = document.createElement('h1')
+        h11.innerHTML ='Elements DOM Creation'
+        div1.appendChild(h11);
+        let p1 = document.createElement('p')
+         p1.innerHTML="This is the first element created from the DOM";
+          div1.appendChild(p1)
+       let body = document.body;
+       let section1 = document.querySelector('#about')
+       body.insertBefore(div1, section1 )
+    //    body.appendChild(div1)
+    </script>
+</body>
+</html>
