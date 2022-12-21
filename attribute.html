@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Attribute</title>
+</head>
+<body>
+    <center>
+        <h2>Welcome to 6 weeks class</h2>
+        <img>
+        <br>
+        <button>ON/OFF</button>
+    </center>
+
+    <script>
+//    let h21 = document.getElementsByTagName('h2')[0];
+//         h21.style.color="red"
+//         h21.style.backgroundColor="black";
+//         h21.style.fontSize='50px';
+
+/* 
+Code to on the bulb
+*/
+   let image=document.getElementsByTagName('img')[0];
+     image.src="images/offbulb.png";
+    image.alt="On Bulb";
+    image.style.width='200px';
+    image.style.height="200px"
+
+
+    let buttons = document.getElementsByTagName('button');
+    let buttonOn = buttons[0];
+    let buttonOff=buttons[1];
+
+ buttonOn.addEventListener('click', function(){
+       let getsrc=image.getAttribute('src')
+       if(getsrc == 'images/offbulb.png'){
+        image.setAttribute('src', 'images/onbulb.jpg')
+       }else{
+        image.setAttribute('src', 'images/offbulb.png')
+       } 
+    })
+
+
+    // buttonOn.addEventListener('click', function(){
+    //     image.setAttribute('src', 'images/onbulb.jpg')
+    //     // image.src="images/onbulb.jpg" 
+    // })
+    
+    // buttonOff.addEventListener('click', ()=>{
+    //     image.setAttribute('src', 'images/offbulb.png') 
+    //     // image.src='images/offbulb.png'
+    // })
+
+
+
+
+
+  
+
+
+    </script>
+</body>
+</html>
